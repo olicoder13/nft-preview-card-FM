@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --soft-blue:hsl(215, 51%, 70%);
+    --cyan:hsl(178, 100%, 50%);
+
+    --dark-blue-main:hsl(217, 54%, 11%);
+    --dark-blue-card:hsl(216, 50%, 16%);
+    --dark-blue-line:hsl(215, 32%, 27%);
+    --white:hsl(0, 0%, 100%);
+
+
+}
+
+body{
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    background-color: var(--dark-blue-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+.container{
+    margin: 50px 20px;
+    background-color: var(--dark-blue-card);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 430px;
+}
+
+.image{
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.image::before{
+    content: url(images/icon-view.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(15, 207, 228, 0.5);
+    border-radius: 10px;
+    inset: 0;
+    opacity: 0;
+    z-index: 10000;
+}
+
+
+
+.image:hover::before{
+    opacity: 1;
+}
+
+
+.image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.container h1{
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.container h1:hover{
+    color: var(--cyan);
+}
+
+.container .main-text{
+    font-size: 16px;
+    color: var(--soft-blue);
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.container .time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--dark-blue-line);
+    margin-bottom: 20px;
+}
+
+.time p{
+    color: var(--soft-blue);
+    opacity: 0.8;
+}
+
+.time p span{
+    color: var(--cyan);
+    font-weight: bold;
+    opacity: 1;
+}
+
+.perfil{
+    display: flex;
+    align-items: center;
+    color: var(--soft-blue);
+    opacity: 0.8;
+    
+}
+.perfil img{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.perfil p span{
+    color: var(--white);
+}
+
+.time p{
+    display: flex;
+    align-items: center;
+}
+
+.time p img{
+    width: 15px;
+    margin-right: 10px;
+}
+
+.perfil p span:hover{
+    color: var(--cyan);
+}
+
+@media (min-width: 768px) {
+    body{
+        min-height: 100vh;
+    }
+    .container{
+        width: 350px;
+    }
+}
+
+
